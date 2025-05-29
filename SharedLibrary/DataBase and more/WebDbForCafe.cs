@@ -1,0 +1,26 @@
+﻿using AspireForChaihana.ServiceDefaults.Models.Cafe;
+using AspireForChaihana.ServiceDefaults.Models.Customers;
+using Microsoft.EntityFrameworkCore;
+using Npgsql;
+
+namespace WebApplication1.DataBase_and_more
+{
+    public class WebDbForCafe : DbContext
+	{
+
+		public WebDbForCafe(DbContextOptions<WebDbForCafe> options) : base(options)
+		{
+			//_ = Database.EnsureCreated();
+		}
+
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
+		{
+			base.OnModelCreating(modelBuilder);
+
+		}
+
+		public DbSet<Product> Products { get; set; }
+
+		public DbSet<Category> Categories { get; set; }
+	}
+}

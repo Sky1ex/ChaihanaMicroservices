@@ -1,0 +1,9 @@
+ dotnet ef migrations add InitialCreate -c WebDbForCustomers -o Migrations/Customers --project AspireForChaihana.ServiceDefaults --startup-project ChaihanaForCustomers
+
+ dotnet ef database update -c WebDbForCustomers --project AspireForChaihana.ServiceDefaults --startup-project ChaihanaForCustomers
+
+PS C:\Рабочая папка\3 курс 2 полугодие\Практика\AspireForChaihana>
+
+postgres://postgres:Uu1PtUAyb9AB5DMM7Her-!@postgresql:5432/WebDbForCafe?sslmode=disable
+
+postgres://postgres:Uu1PtUAyb9AB5DMM7Her-!@172.19.0.4:5432/WebDbForCafe?sslmode=disable

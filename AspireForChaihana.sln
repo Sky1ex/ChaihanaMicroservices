@@ -1,0 +1,52 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireForChaihana.AppHost", "AspireForChaihana.AppHost\AspireForChaihana.AppHost.csproj", "{9CDA3832-9E68-4ED7-BF0B-8A543C2CB9B1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{97C4C90B-61E2-44AB-81EA-CB52A3527664} = {97C4C90B-61E2-44AB-81EA-CB52A3527664}
+		{D58F12FE-6E05-4AE4-9083-AE8D5E94A3A4} = {D58F12FE-6E05-4AE4-9083-AE8D5E94A3A4}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireForChaihana.ServiceDefaults", "AspireForChaihana.ServiceDefaults\AspireForChaihana.ServiceDefaults.csproj", "{256D46F1-0A7E-4000-8097-F062352E53D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "ChaihanaForCustomers\WebApplication1.csproj", "{D58F12FE-6E05-4AE4-9083-AE8D5E94A3A4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChaihanaForEmplyee", "ChaihanaForEmplyee\ChaihanaForEmplyee.csproj", "{97C4C90B-61E2-44AB-81EA-CB52A3527664}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedLibrary", "SharedLibrary\SharedLibrary.csproj", "{A10D5913-CCF2-450B-8A3A-CD4ECA75F0AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CDA3832-9E68-4ED7-BF0B-8A543C2CB9B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CDA3832-9E68-4ED7-BF0B-8A543C2CB9B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CDA3832-9E68-4ED7-BF0B-8A543C2CB9B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CDA3832-9E68-4ED7-BF0B-8A543C2CB9B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{256D46F1-0A7E-4000-8097-F062352E53D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{256D46F1-0A7E-4000-8097-F062352E53D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{256D46F1-0A7E-4000-8097-F062352E53D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{256D46F1-0A7E-4000-8097-F062352E53D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D58F12FE-6E05-4AE4-9083-AE8D5E94A3A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D58F12FE-6E05-4AE4-9083-AE8D5E94A3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D58F12FE-6E05-4AE4-9083-AE8D5E94A3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D58F12FE-6E05-4AE4-9083-AE8D5E94A3A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C4C90B-61E2-44AB-81EA-CB52A3527664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C4C90B-61E2-44AB-81EA-CB52A3527664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C4C90B-61E2-44AB-81EA-CB52A3527664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C4C90B-61E2-44AB-81EA-CB52A3527664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10D5913-CCF2-450B-8A3A-CD4ECA75F0AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10D5913-CCF2-450B-8A3A-CD4ECA75F0AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10D5913-CCF2-450B-8A3A-CD4ECA75F0AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10D5913-CCF2-450B-8A3A-CD4ECA75F0AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DEF218C2-7012-4282-AA06-A5D8B506C331}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<Sdk Name="Aspire.AppHost.Sdk" Version="9.0.0" />
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+    <UserSecretsId>d1a2cb9d-91d4-4b58-906b-2ff1a940736e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="9.2.1" />
+    <PackageReference Include="Aspire.Hosting.Docker" Version="9.3.0-preview.1.25265.20" />
+    <PackageReference Include="Aspire.Hosting.PostgreSQL" Version="9.2.1" />
+    <PackageReference Include="Confluent.Kafka" Version="2.10.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AspireForChaihana.ServiceDefaults\AspireForChaihana.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\ChaihanaForCustomers\WebApplication1.csproj" />
+    <ProjectReference Include="..\ChaihanaForEmplyee\ChaihanaForEmplyee.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<WebApplication1.DTO.OrderDto>
+<h1>Ваши заказы:</h1>
+
+@if (Model == null)
+{
+    <div class="empty">Заказов нет</div>
+}
+
+else @foreach (var order in Model)
+    {
+        <li>
+            <div class="Order">Дата заказа - @order.DateTime, Адрес заказа - @order.Address.City, @order.Address.Street, @order.Address.House</div>>
+            <div class="Products">Товары:</div>
+            @foreach(var orderElem in order.Products)
+            {
+                <div class="product">@orderElem.Product.Name - @orderElem.Product.Price - @orderElem.Count</div>
+            }
+        </li>
+    }

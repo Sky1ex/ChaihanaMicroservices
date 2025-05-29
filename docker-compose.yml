@@ -1,0 +1,30 @@
+services:
+  customers:
+    build: ./ChaihanaForCustomers
+    ports:
+      - 8080:5000
+    depends_on:
+      - WebDbForCafe
+      - WebDbForCustomers
+  WebDbForCafe:
+    image: postgres:17
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: WebDbForCafe
+      POSTGRES_USER: postgres
+    volumes:
+     - postgres_data_cafe:/var/lib/postgresql/data
+     - ./AspireForChaihana.ServiceDefaults/DataBase_and_more/Dumps/WebDbForCafeDump.sql:/docker-entrypoint-initdb.d/dump.sql
+  WebDbForCustomers:
+    image: postgres:17
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: WebDbForCustomers
+      POSTGRES_USER: postgres
+    volumes:
+     - postgres_data_customers:/var/lib/postgresql/data
+     - ./AspireForChaihana.ServiceDefaults/DataBase_and_more/Dumps/WebDbForCustomersDump.sql:/docker-entrypoint-initdb.d/dump.sql
+
+volumes:
+  postgres_data_cafe:
+  postgres_data_customers:

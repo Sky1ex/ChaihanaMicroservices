@@ -1,0 +1,26 @@
+# Используем официальный образ SDK для сборки
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /app
+
+# 1. Копируем весь solution и файлы проектов
+COPY ["AspireForChaihana.sln", "."]
+COPY ["AspireForChaihana.AppHost/AspireForChaihana.AppHost.csproj", "AspireForChaihana.AppHost/"]
+COPY ["AspireForChaihana.ServiceDefaults/AspireForChaihana.ServiceDefaults.csproj", "AspireForChaihana.ServiceDefaults/"]
+COPY ["ChaihanaForCustomers/WebApplication1.csproj", "ChaihanaForCustomers/"]
+COPY ["ChaihanaForEmplyee/ChaihanaForEmplyee.csproj", "ChaihanaForEmplyee/"]
+
+# 2. Восстанавливаем зависимости
+RUN dotnet restore "AspireForChaihana.sln"
+
+# 3. Копируем весь исходный код
+COPY . .
+
+# 4. Собираем и публикуем AppHost
+WORKDIR /app
+RUN dotnet build -c Release -o "./out"
+
+# 5. Финальный образ
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+WORKDIR /app
+COPY --from=build /app/out .
+ENTRYPOINT ["dotnet", "AspireForChaihana.AppHost.dll"]

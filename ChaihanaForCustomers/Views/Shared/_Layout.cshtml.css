@@ -1,0 +1,167 @@
+﻿/*header*/
+.menu {
+    height: 80px;
+    z-index: 2;
+    position: relative;
+    width: 100%;
+}
+
+.container-fluid {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /*height: auto;*/
+}
+
+header {
+    height: 80px;
+    z-index: 2;
+    position: relative;
+}
+
+/*Фон для header*/
+.back {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    padding: 0px;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    display: block;
+}
+
+/*Пункты меню*/
+.navbar-nav {
+    position: absolute;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 30px;
+    position: absolute;
+    width: 490px;
+    height: 25px;
+    left: calc(50% - 490px/2);
+    top: 27px;
+}
+
+/*Элементы меню*/
+.nav-item {
+    font-family: 'Prosto One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    flex-direction: row;
+    /* identical to box height */
+
+    color: #000000;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+/*Иконка ЛК*/
+.nav-item-account {
+    /* ЛК */
+
+    list-style: none;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    align-items:center;
+    flex: 1;
+    right: 20px;
+    top: 15px;
+}
+
+/*Лого*/
+::deep .logo {
+    /* чайхана */
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    width: 138px;
+    height: 37px;
+    left: 20px;
+    top: 20px;
+    font-family: 'Prosto One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 37px;
+    position: absolute;
+    color: #E67225;
+}
+
+footer {
+    /*top: calc(100% + 300px);*/
+    top: 40px;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    white-space: nowrap;
+    background-color: rgba(249, 251, 250, 0.6);
+    z-index: 1;
+    margin-top: auto;
+    border-radius: 20px 20px 0 0;
+}
+
+.points {
+    /* points */
+
+    position: relative;
+    place-content: center;
+    place-items: center;
+    align-self: center;
+    display: flex;
+    top: calc(150px/2 - 25px);
+    gap: 120px;
+
+    font-family: 'Prosto One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #000000;
+}
+
+.copyrite {
+    position: absolute;
+    left: 60px;
+    bottom: 25px;
+    
+    font-family: 'Prosto One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.vector {
+    /* Vector 1 */
+
+    position: fixed;
+    display: block;
+    width: 1608px;
+    height: 795.31px;
+    left: 111px;
+    top: 120px;
+    filter: blur(4px);
+    z-index: 1;
+}
+
+#steamCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Чтобы был под контентом */
+    pointer-events: none; /* Чтобы не блокировал клики */
+    opacity: 0.5; /* Полупрозрачный пар */
+}
