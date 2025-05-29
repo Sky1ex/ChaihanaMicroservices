@@ -1,13 +1,10 @@
 using Mapster;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Controllers;
-using WebApplication1.DataBase;
-using WebApplication1.DataBase_and_more;
+using DefaultLibrary.DataBase_and_more;
 using WebApplication1.DTO;
 using WebApplication1.OtherClasses;
-using WebApplication1.Repository.Default;
 using WebApplication1.Services;
 using WebApplication1.Exceptions;
 using Microsoft.AspNetCore.Mvc.Abstractions;
@@ -17,14 +14,15 @@ using Microsoft.AspNetCore.Mvc;
 using MapsterMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
 using Npgsql;
-using Aspire.Npgsql;
-using AspireForChaihana.ServiceDefaults.Repository.Default;
+using DefaultLibrary.Repository.Default;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.AddServiceDefaults();
+/*builder.AddServiceDefaults();*/
+
+builder.Services.AddScoped<IUnitOfWorkCustomers, UnitOfWorkCustomers>();
+builder.Services.AddScoped<IUnitOfWorkCafe, UnitOfWorkCafe>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

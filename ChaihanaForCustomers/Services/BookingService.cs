@@ -1,10 +1,9 @@
-﻿using AspireForChaihana.ServiceDefaults.Models.Customers;
+﻿using DefaultLibrary.Models.Customers;
 using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
-using WebApplication1.DataBase;
+using DefaultLibrary.DataBase;
 using WebApplication1.DTO;
-using WebApplication1.OtherClasses;
-using WebApplication1.Repository.Default;
+using DefaultLibrary.Repository.Default;
 
 namespace WebApplication1.Services
 {

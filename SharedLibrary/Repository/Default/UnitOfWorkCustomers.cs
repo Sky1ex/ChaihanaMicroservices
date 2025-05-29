@@ -1,8 +1,8 @@
-﻿using System.Data.Entity;
-using WebApplication1.DataBase;
-using WebApplication1.DataBase_and_more;
+﻿
+using DefaultLibrary.DataBase;
+using DefaultLibrary.DataBase_and_more;
 
-namespace WebApplication1.Repository.Default
+namespace DefaultLibrary.Repository.Default
 {
 	public class UnitOfWorkCustomers : IUnitOfWorkCustomers
 	{

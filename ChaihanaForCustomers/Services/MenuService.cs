@@ -1,5 +1,5 @@
-﻿using AspireForChaihana.ServiceDefaults.Models.Cafe;
-using AspireForChaihana.ServiceDefaults.Repository.Default;
+﻿using DefaultLibrary.Models.Cafe;
+using DefaultLibrary.Repository.Default;
 
 namespace WebApplication1.Services
 {

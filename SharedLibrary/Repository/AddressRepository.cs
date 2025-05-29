@@ -1,10 +1,10 @@
-﻿using WebApplication1.DataBase;
-using WebApplication1.Repository.Default;
+﻿using DefaultLibrary.DataBase;
+using DefaultLibrary.Repository.Default;
 using Microsoft.EntityFrameworkCore;
-using WebApplication1.DataBase_and_more;
-using AspireForChaihana.ServiceDefaults.Models.Customers;
+using DefaultLibrary.DataBase_and_more;
+using DefaultLibrary.Models.Customers;
 
-namespace WebApplication1.Repository
+namespace DefaultLibrary.Repository
 {
     public class AddressRepository : Repository<Adress, WebDbForCustomers>, IDisposable
     {

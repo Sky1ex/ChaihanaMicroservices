@@ -1,9 +1,9 @@
-﻿using AspireForChaihana.ServiceDefaults.Models.Cafe;
-using AspireForChaihana.ServiceDefaults.Models.Customers;
+﻿using DefaultLibrary.Models.Cafe;
+using DefaultLibrary.Models.Customers;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
 
-namespace WebApplication1.DataBase
+namespace DefaultLibrary.DataBase
 {
     public class WebDbForEmployee : DbContext
     {

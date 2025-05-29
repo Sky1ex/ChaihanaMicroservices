@@ -1,6 +1,6 @@
-﻿using AspireForChaihana.ServiceDefaults.Models.Cafe;
+﻿using DefaultLibrary.Models.Cafe;
 
-namespace AspireForChaihana.ServiceDefaults.Models.Customers
+namespace DefaultLibrary.Models.Customers
 {
     public class CartElement
     {

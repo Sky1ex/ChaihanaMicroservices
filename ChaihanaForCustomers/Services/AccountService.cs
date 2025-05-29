@@ -1,20 +1,19 @@
-﻿using AspireForChaihana.ServiceDefaults.Models.Customers;
-using AspireForChaihana.ServiceDefaults.Repository.Default;
+﻿using DefaultLibrary.Models.Customers;
+using DefaultLibrary.Repository.Default;
 using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
-using WebApplication1.DataBase;
+using DefaultLibrary.DataBase;
 using WebApplication1.DTO;
-using WebApplication1.Repository.Default;
 
 namespace WebApplication1.Services
 {
     public class AccountService : IAccountService
     {
         private readonly IUnitOfWorkCustomers _unitOfWorkForCustomers;
-        private readonly AspireForChaihana.ServiceDefaults.Repository.Default.IUnitOfWorkCafe _unitOfWorkForCafe;
+        private readonly IUnitOfWorkCafe _unitOfWorkForCafe;
         private readonly ILogger<CartService> _logger;
         public static List<CodeDto> _codeList = new List<CodeDto>();
         private readonly IMapper _mapper;

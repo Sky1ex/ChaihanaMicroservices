@@ -1,4 +1,4 @@
-﻿namespace AspireForChaihana.ServiceDefaults.Models.Customers
+﻿namespace DefaultLibrary.Models.Customers
 {
     public class Booking
     {

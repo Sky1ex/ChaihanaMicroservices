@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using WebApplication1.DataBase_and_more;
+using DefaultLibrary.DataBase_and_more;
 
 #nullable disable
 
-namespace AspireForChaihana.ServiceDefaults.Migrations.Customers
+namespace DefaultLibrary.Migrations.Customers
 {
     [DbContext(typeof(WebDbForCustomers))]
     partial class WebDbForCustomersModelSnapshot : ModelSnapshot

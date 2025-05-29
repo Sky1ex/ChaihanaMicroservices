@@ -2,14 +2,14 @@
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
-using WebApplication1.DataBase;
+using DefaultLibrary.DataBase;
 using System;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
-using WebApplication1.DataBase_and_more;
-using WebApplication1.Repository.Default;
-using AspireForChaihana.ServiceDefaults.Models.Customers;
+using DefaultLibrary.DataBase_and_more;
+using DefaultLibrary.Repository.Default;
+using DefaultLibrary.Models.Customers;
 
 namespace WebApplication1.Controllers
 {

@@ -4,7 +4,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace WebApplication1.DataBase_and_more
+namespace DefaultLibrary.DataBase_and_more
 {
     public class AuthOptions
     {

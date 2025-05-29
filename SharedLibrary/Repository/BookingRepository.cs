@@ -1,10 +1,10 @@
-﻿using AspireForChaihana.ServiceDefaults.Models.Customers;
+﻿using DefaultLibrary.Models.Customers;
 using Microsoft.EntityFrameworkCore;
-using WebApplication1.DataBase;
-using WebApplication1.DataBase_and_more;
-using WebApplication1.Repository.Default;
+using DefaultLibrary.DataBase;
+using DefaultLibrary.DataBase_and_more;
+using DefaultLibrary.Repository.Default;
 
-namespace WebApplication1.Repository
+namespace DefaultLibrary.Repository
 {
     public class BookingRepository : Repository<Booking, WebDbForCustomers>, IDisposable
 	{

@@ -1,4 +1,4 @@
-﻿namespace AspireForChaihana.ServiceDefaults.Models.Cafe
+﻿namespace DefaultLibrary.Models.Cafe
 {
     public class Category
     {

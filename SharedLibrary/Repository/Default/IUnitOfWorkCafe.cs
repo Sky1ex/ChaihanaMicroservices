@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebApplication1.Repository;
+using DefaultLibrary.Repository;
 
-namespace AspireForChaihana.ServiceDefaults.Repository.Default
+namespace DefaultLibrary.Repository.Default
 {
 	public interface IUnitOfWorkCafe
 	{

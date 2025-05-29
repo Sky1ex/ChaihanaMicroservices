@@ -1,9 +1,8 @@
-﻿using AspireForChaihana.ServiceDefaults.Models.Cafe;
-using AspireForChaihana.ServiceDefaults.Models.Customers;
+﻿using DefaultLibrary.Models.Cafe;
+using DefaultLibrary.Models.Customers;
 using Microsoft.EntityFrameworkCore;
-using Npgsql;
 
-namespace WebApplication1.DataBase_and_more
+namespace DefaultLibrary.DataBase_and_more
 {
     public class WebDbForCustomers : DbContext
 	{

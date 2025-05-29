@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 
-namespace WebApplication1.DataBase_and_more
+namespace DefaultLibrary.DataBase_and_more
 {
     public class ExceptionHandler : IExceptionHandler
     {

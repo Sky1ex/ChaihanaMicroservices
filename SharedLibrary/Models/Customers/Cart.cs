@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AspireForChaihana.ServiceDefaults.Models.Customers
+namespace DefaultLibrary.Models.Customers
 {
     public class Cart
     {

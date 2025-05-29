@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
-using WebApplication1.DataBase;
+using DefaultLibrary.DataBase;
 using WebApplication1.DTO;
 using WebApplication1.Exceptions;
 using WebApplication1.OtherClasses;

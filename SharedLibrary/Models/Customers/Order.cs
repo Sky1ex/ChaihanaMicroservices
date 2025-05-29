@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace AspireForChaihana.ServiceDefaults.Models.Customers
+namespace DefaultLibrary.Models.Customers
 {
     public class Order
     {

@@ -1,9 +1,8 @@
-﻿using AspireForChaihana.ServiceDefaults.Models.Customers;
-using AspireForChaihana.ServiceDefaults.Repository.Default;
+﻿using DefaultLibrary.Models.Customers;
+using DefaultLibrary.Repository.Default;
 using FluentAssertions;
 using MapsterMapper;
 using WebApplication1.DTO;
-using WebApplication1.Repository.Default;
 
 namespace WebApplication1.Services
 {

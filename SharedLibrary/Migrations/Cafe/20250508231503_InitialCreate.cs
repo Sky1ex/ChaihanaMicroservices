@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace AspireForChaihana.ServiceDefaults.Migrations.Cafe
+namespace DefaultLibrary.Migrations.Cafe
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

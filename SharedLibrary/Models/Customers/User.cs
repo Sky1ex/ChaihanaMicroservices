@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebApplication1.DataBase;
 
 // Внимание! Добавить синхронизацию с аккаунтом с номером и без!
 
-namespace AspireForChaihana.ServiceDefaults.Models.Customers
+namespace DefaultLibrary.Models.Customers
 {
     public class User
     {

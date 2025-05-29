@@ -1,14 +1,14 @@
-﻿using AspireForChaihana.ServiceDefaults.Models.Customers;
+﻿using DefaultLibrary.Models.Customers;
 using MapsterMapper;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using WebApplication1.DataBase;
-using WebApplication1.DataBase_and_more;
+using DefaultLibrary.DataBase;
+using DefaultLibrary.DataBase_and_more;
 using WebApplication1.DTO;
-using WebApplication1.Repository.Default;
+using DefaultLibrary.Repository.Default;
 
 namespace WebApplication1.OtherClasses
 {

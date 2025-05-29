@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace WebApplication1.Repository.Default
+namespace DefaultLibrary.Repository.Default
 {
 
 	public class Repository<TEntity, TContext> : IRepository<TEntity, TContext>

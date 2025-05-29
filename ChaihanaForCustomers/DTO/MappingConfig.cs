@@ -1,5 +1,5 @@
-﻿using AspireForChaihana.ServiceDefaults.Models.Cafe;
-using AspireForChaihana.ServiceDefaults.Models.Customers;
+﻿using DefaultLibrary.Models.Cafe;
+using DefaultLibrary.Models.Customers;
 using Mapster;
 
 namespace WebApplication1.DTO

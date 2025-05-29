@@ -1,15 +1,15 @@
-﻿using AspireForChaihana.ServiceDefaults.Models.Customers;
+﻿using DefaultLibrary.Models.Customers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebApplication1.DataBase_and_more;
-using WebApplication1.Repository;
+using DefaultLibrary.DataBase_and_more;
+using DefaultLibrary.Repository;
 
-namespace AspireForChaihana.ServiceDefaults.Repository.Default
+namespace DefaultLibrary.Repository.Default
 {
-	internal class UnitOfWorkCafe : IUnitOfWorkCafe
+	public class UnitOfWorkCafe : IUnitOfWorkCafe
 	{
 
 		protected readonly WebDbForCafe _context;

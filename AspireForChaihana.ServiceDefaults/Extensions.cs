@@ -24,8 +24,8 @@ public static class Extensions
 		builder.ConfigureOpenTelemetry();
 
         // явл€етс€ об€зательным
-		builder.Services.AddScoped<IUnitOfWorkCustomers, UnitOfWorkCustomers>();
-        builder.Services.AddScoped<IUnitOfWorkCafe, UnitOfWorkCafe>();
+		/*builder.Services.AddScoped<IUnitOfWorkCustomers, UnitOfWorkCustomers>();
+        builder.Services.AddScoped<IUnitOfWorkCafe, UnitOfWorkCafe>();*/
         //
 
 		builder.AddDefaultHealthChecks();
