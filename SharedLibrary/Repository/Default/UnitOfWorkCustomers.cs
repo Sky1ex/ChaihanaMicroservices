@@ -1,8 +1,6 @@
-﻿
-using DefaultLibrary.DataBase;
-using DefaultLibrary.DataBase_and_more;
+﻿using SharedLibrary.DataBase_and_more;
 
-namespace DefaultLibrary.Repository.Default
+namespace SharedLibrary.Repository.Default
 {
 	public class UnitOfWorkCustomers : IUnitOfWorkCustomers
 	{

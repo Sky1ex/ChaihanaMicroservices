@@ -1,13 +1,6 @@
-﻿using DefaultLibrary.Models.Customers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DefaultLibrary.DataBase_and_more;
-using DefaultLibrary.Repository;
+﻿using SharedLibrary.DataBase_and_more;
 
-namespace DefaultLibrary.Repository.Default
+namespace SharedLibrary.Repository.Default
 {
 	public class UnitOfWorkCafe : IUnitOfWorkCafe
 	{

@@ -1,5 +1,5 @@
-﻿using DefaultLibrary.Models.Cafe;
-using DefaultLibrary.Models.Customers;
+﻿using SharedLibrary.Models.Cafe;
+using SharedLibrary.Models.Customers;
 using Mapster;
 
 namespace WebApplication1.DTO

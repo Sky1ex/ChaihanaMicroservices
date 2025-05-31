@@ -1,0 +1,21 @@
+﻿.menu-content-wrapper {
+    position: relative;
+    min-height: calc(100vh - 310px); /* Вычитаем высоту header */
+    padding-top: 110px; /* Компенсируем top: 110px у visible-category */
+    margin-bottom: 40px; /* Для футера */
+    justify-self: center;
+    display: flex;
+    align-items: center;
+}
+
+.main-container {
+    /* Rectangle 36 */
+
+    position: relative;
+    width: 420px;
+    height: 420px;
+    top: -70px;
+    justify-self: center;
+    background: rgba(249, 251, 250, 0.8);
+    border-radius: 29px;
+}

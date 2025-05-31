@@ -1,6 +1,6 @@
-﻿using DefaultLibrary.Models.Cafe;
+﻿using SharedLibrary.Models.Cafe;
 
-namespace DefaultLibrary.Models.Customers
+namespace SharedLibrary.Models.Customers
 {
     public class CartElement
     {

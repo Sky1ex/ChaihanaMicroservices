@@ -5,7 +5,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Projects;
 using Aspire.Hosting.Docker;
 
-// Контейнеры работают праильно. Нужно тепеь наладить связь между БД
+// Контейнеры для кажого микросервиса нужно делать в корне (AspireForChaihana). Aspire можно удалить как только проект готов будет к продакшену. И именно с этим нужно разобраться.
+
 var builder = DistributedApplication.CreateBuilder(args);
 
 var employeeDb = builder.AddPostgres("postgres-employee")

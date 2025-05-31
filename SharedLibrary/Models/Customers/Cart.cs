@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DefaultLibrary.Models.Customers
+namespace SharedLibrary.Models.Customers
 {
     public class Cart
     {

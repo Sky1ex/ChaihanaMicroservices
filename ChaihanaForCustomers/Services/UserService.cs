@@ -1,14 +1,13 @@
-﻿using DefaultLibrary.Models.Customers;
+﻿using SharedLibrary.Models.Customers;
 using MapsterMapper;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using DefaultLibrary.DataBase;
-using DefaultLibrary.DataBase_and_more;
+using SharedLibrary.DataBase_and_more;
 using WebApplication1.DTO;
-using DefaultLibrary.Repository.Default;
+using SharedLibrary.Repository.Default;
 
 namespace WebApplication1.OtherClasses
 {

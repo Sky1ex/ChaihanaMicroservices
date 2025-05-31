@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using DefaultLibrary.DataBase;
 using WebApplication1.DTO;
 using WebApplication1.Exceptions;
 using WebApplication1.OtherClasses;

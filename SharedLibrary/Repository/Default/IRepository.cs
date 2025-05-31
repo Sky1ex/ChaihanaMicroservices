@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace DefaultLibrary.Repository.Default
+namespace SharedLibrary.Repository.Default
 {
 	
 	public interface IRepository<TEntity, TContext> where TEntity : class

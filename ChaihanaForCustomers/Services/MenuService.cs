@@ -1,5 +1,5 @@
-﻿using DefaultLibrary.Models.Cafe;
-using DefaultLibrary.Repository.Default;
+﻿using SharedLibrary.Models.Cafe;
+using SharedLibrary.Repository.Default;
 
 namespace WebApplication1.Services
 {

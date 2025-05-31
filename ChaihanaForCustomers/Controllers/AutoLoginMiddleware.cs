@@ -2,14 +2,13 @@
 using Microsoft.AspNetCore.Authentication;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
-using DefaultLibrary.DataBase;
 using System;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
-using DefaultLibrary.DataBase_and_more;
-using DefaultLibrary.Repository.Default;
-using DefaultLibrary.Models.Customers;
+using SharedLibrary.DataBase_and_more;
+using SharedLibrary.Repository.Default;
+using SharedLibrary.Models.Customers;
 
 namespace WebApplication1.Controllers
 {

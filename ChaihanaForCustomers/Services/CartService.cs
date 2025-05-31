@@ -1,5 +1,5 @@
-﻿using DefaultLibrary.Models.Customers;
-using DefaultLibrary.Repository.Default;
+﻿using SharedLibrary.Models.Customers;
+using SharedLibrary.Repository.Default;
 using FluentAssertions;
 using MapsterMapper;
 using WebApplication1.DTO;

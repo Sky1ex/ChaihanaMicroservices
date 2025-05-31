@@ -2,7 +2,7 @@ using Mapster;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Controllers;
-using DefaultLibrary.DataBase_and_more;
+using SharedLibrary.DataBase_and_more;
 using WebApplication1.DTO;
 using WebApplication1.OtherClasses;
 using WebApplication1.Services;
@@ -15,7 +15,7 @@ using MapsterMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Npgsql;
-using DefaultLibrary.Repository.Default;
+using SharedLibrary.Repository.Default;
 
 var builder = WebApplication.CreateBuilder(args);
 

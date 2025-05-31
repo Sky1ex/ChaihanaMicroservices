@@ -7,3 +7,7 @@ PS C:\Рабочая папка\3 курс 2 полугодие\Практика
 postgres://postgres:Uu1PtUAyb9AB5DMM7Her-!@postgresql:5432/WebDbForCafe?sslmode=disable
 
 postgres://postgres:Uu1PtUAyb9AB5DMM7Her-!@172.19.0.4:5432/WebDbForCafe?sslmode=disable
+
+dotnet ef database update InitialCreate1 --context WebDbForEmployee --project 'C:/Рабочая папка/3 курс 2 полугодие/TestDocker/AspireForChaihana/SharedLibrary/' --startup-project ChaihanaForEmplyee
+
+dotnet ef migrations add InitialCreate1 --context WebDbForEmployee --output-dir 'C:/Рабочая папка/3 курс 2 полугодие/TestDocker/AspireForChaihana/SharedLibrary/Migrations/Employee/' --project 'C:/Рабочая папка/3 курс 2 полугодие/TestDocker/AspireForChaihana/SharedLibrary/' --startup-project ChaihanaForEmplyee

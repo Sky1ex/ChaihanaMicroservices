@@ -1,11 +1,10 @@
-﻿using DefaultLibrary.Models.Customers;
-using DefaultLibrary.Repository.Default;
+﻿using SharedLibrary.Models.Customers;
+using SharedLibrary.Repository.Default;
 using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
-using DefaultLibrary.DataBase;
 using WebApplication1.DTO;
 
 namespace WebApplication1.Services

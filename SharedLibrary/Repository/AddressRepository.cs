@@ -1,10 +1,9 @@
-﻿using DefaultLibrary.DataBase;
-using DefaultLibrary.Repository.Default;
+﻿using SharedLibrary.Repository.Default;
 using Microsoft.EntityFrameworkCore;
-using DefaultLibrary.DataBase_and_more;
-using DefaultLibrary.Models.Customers;
+using SharedLibrary.DataBase_and_more;
+using SharedLibrary.Models.Customers;
 
-namespace DefaultLibrary.Repository
+namespace SharedLibrary.Repository
 {
     public class AddressRepository : Repository<Adress, WebDbForCustomers>, IDisposable
     {

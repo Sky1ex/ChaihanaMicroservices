@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>20dc4661-4ce9-4e92-8b22-07fa63225efc</UserSecretsId>
-    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
@@ -27,7 +27,6 @@
   <ItemGroup>
     <None Remove=".dockerignore" />
     <None Remove="docker-compose.yml" />
-    <None Remove="Dockerfile" />
     <None Remove="Views\Account\Account.js" />
   </ItemGroup>
 

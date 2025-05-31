@@ -2,15 +2,32 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.OAuth;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using WebApplication1.DataBase_and_more;
+using Npgsql;
+using SharedLibrary.DataBase_and_more;
+using SharedLibrary.Repository.Default;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.AddNpgsqlDataSource(connectionName: "postgres-customer");
-builder.AddNpgsqlDataSource(connectionName: "postgres-cafe");
+builder.Services.AddScoped<IUnitOfWorkEmployee, UnitOfWorkEmployee>();
+builder.Services.AddScoped<IUnitOfWorkCafe, UnitOfWorkCafe>();
+
+/*builder.Services.AddDbContext<WebDbForCafe>((sp, options) =>
+{
+	var dataSource = sp.GetKeyedService<NpgsqlDataSource>("WebDbForCafe");
+	*//*var dataSource = sp.GetRequiredService<NpgsqlDataSource>();*//*
+	options.UseNpgsql(dataSource);
+});*/
+
+builder.Services.AddDbContext<WebDbForEmployee>(options =>
+	options.UseNpgsql(builder.Configuration.GetConnectionString("WebDbForEmployee")));
+
+builder.Services.AddDbContext<WebDbForCafe>(options =>
+	options.UseNpgsql(builder.Configuration.GetConnectionString("WebDbForCafe")));
+
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 	.AddJwtBearer(options =>
@@ -58,7 +75,12 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-	name: "default",
-	pattern: "{controller=Home}/{action=Index}/{id?}");
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
+    name: "Registration",
+    pattern: "Employee/{action=Index}",
+    defaults: new { controller = "Registration" });
 
 app.Run();

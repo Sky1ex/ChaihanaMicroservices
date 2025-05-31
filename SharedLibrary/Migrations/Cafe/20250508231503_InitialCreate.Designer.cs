@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using DefaultLibrary.DataBase_and_more;
+using SharedLibrary.DataBase_and_more;
 
 #nullable disable
 
-namespace DefaultLibrary.Migrations.Cafe
+namespace SharedLibrary.Migrations.Cafe
 {
     [DbContext(typeof(WebDbForCafe))]
     [Migration("20250508231503_InitialCreate")]

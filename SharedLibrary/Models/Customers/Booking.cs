@@ -1,4 +1,4 @@
-﻿namespace DefaultLibrary.Models.Customers
+﻿namespace SharedLibrary.Models.Customers
 {
     public class Booking
     {

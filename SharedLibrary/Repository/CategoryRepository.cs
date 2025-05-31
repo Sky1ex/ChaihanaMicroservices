@@ -1,9 +1,8 @@
-﻿using DefaultLibrary.Models.Cafe;
-using DefaultLibrary.DataBase;
-using DefaultLibrary.DataBase_and_more;
-using DefaultLibrary.Repository.Default;
+﻿using SharedLibrary.Models.Cafe;
+using SharedLibrary.DataBase_and_more;
+using SharedLibrary.Repository.Default;
 
-namespace DefaultLibrary.Repository
+namespace SharedLibrary.Repository
 {
     public class CategoryRepository : Repository<Category, WebDbForCafe>, IDisposable
     {

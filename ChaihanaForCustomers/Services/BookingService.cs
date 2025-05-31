@@ -1,9 +1,8 @@
-﻿using DefaultLibrary.Models.Customers;
+﻿using SharedLibrary.Models.Customers;
 using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
-using DefaultLibrary.DataBase;
 using WebApplication1.DTO;
-using DefaultLibrary.Repository.Default;
+using SharedLibrary.Repository.Default;
 
 namespace WebApplication1.Services
 {

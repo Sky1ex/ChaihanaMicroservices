@@ -1,4 +1,4 @@
-﻿namespace DefaultLibrary.Models.Cafe
+﻿namespace SharedLibrary.Models.Cafe
 {
     public class Product
     {

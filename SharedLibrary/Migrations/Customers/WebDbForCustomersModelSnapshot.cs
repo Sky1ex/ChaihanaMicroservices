@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using DefaultLibrary.DataBase_and_more;
+using SharedLibrary.DataBase_and_more;
 
 #nullable disable
 
-namespace DefaultLibrary.Migrations.Customers
+namespace SharedLibrary.Migrations.Customers
 {
     [DbContext(typeof(WebDbForCustomers))]
     partial class WebDbForCustomersModelSnapshot : ModelSnapshot

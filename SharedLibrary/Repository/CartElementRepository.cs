@@ -1,9 +1,8 @@
-﻿using DefaultLibrary.Models.Customers;
-using DefaultLibrary.DataBase;
-using DefaultLibrary.DataBase_and_more;
-using DefaultLibrary.Repository.Default;
+﻿using SharedLibrary.Models.Customers;
+using SharedLibrary.DataBase_and_more;
+using SharedLibrary.Repository.Default;
 
-namespace DefaultLibrary.Repository
+namespace SharedLibrary.Repository
 {
     public class CartElementRepository : Repository<CartElement, WebDbForCustomers>, IDisposable
     {

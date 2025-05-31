@@ -1,10 +1,9 @@
-﻿using DefaultLibrary.Models.Cafe;
+﻿using SharedLibrary.Models.Cafe;
 using Microsoft.EntityFrameworkCore;
-using DefaultLibrary.DataBase;
-using DefaultLibrary.DataBase_and_more;
-using DefaultLibrary.Repository.Default;
+using SharedLibrary.DataBase_and_more;
+using SharedLibrary.Repository.Default;
 
-namespace DefaultLibrary.Repository
+namespace SharedLibrary.Repository
 {
     public class ProductRepository : Repository<Product, WebDbForCafe>, IDisposable
     {

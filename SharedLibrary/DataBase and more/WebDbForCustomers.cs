@@ -1,8 +1,8 @@
-﻿using DefaultLibrary.Models.Cafe;
-using DefaultLibrary.Models.Customers;
+﻿using SharedLibrary.Models.Cafe;
+using SharedLibrary.Models.Customers;
 using Microsoft.EntityFrameworkCore;
 
-namespace DefaultLibrary.DataBase_and_more
+namespace SharedLibrary.DataBase_and_more
 {
     public class WebDbForCustomers : DbContext
 	{

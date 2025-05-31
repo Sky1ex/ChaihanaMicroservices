@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace DefaultLibrary.Models.Customers
+namespace SharedLibrary.Models.Customers
 {
     public class Order
     {

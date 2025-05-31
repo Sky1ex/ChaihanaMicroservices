@@ -2,7 +2,7 @@
 
 // Внимание! Добавить синхронизацию с аккаунтом с номером и без!
 
-namespace DefaultLibrary.Models.Customers
+namespace SharedLibrary.Models.Customers
 {
     public class User
     {

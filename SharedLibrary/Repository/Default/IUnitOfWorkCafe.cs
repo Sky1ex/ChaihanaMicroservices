@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DefaultLibrary.Repository;
+using SharedLibrary.Repository;
 
-namespace DefaultLibrary.Repository.Default
+namespace SharedLibrary.Repository.Default
 {
 	public interface IUnitOfWorkCafe
 	{

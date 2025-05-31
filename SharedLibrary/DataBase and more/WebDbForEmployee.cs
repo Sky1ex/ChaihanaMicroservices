@@ -1,9 +1,10 @@
-﻿using DefaultLibrary.Models.Cafe;
-using DefaultLibrary.Models.Customers;
+﻿using SharedLibrary.Models.Cafe;
+using SharedLibrary.Models.Customers;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json;
+using SharedLibrary.Models.Employee;
 
-namespace DefaultLibrary.DataBase
+namespace SharedLibrary.DataBase_and_more
 {
     public class WebDbForEmployee : DbContext
     {
@@ -16,7 +17,14 @@ namespace DefaultLibrary.DataBase
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
         }
+
+        DbSet<Employee> Employees { get; set; }
+
+        DbSet<Shop> Shops { get; set; }
+
+        DbSet<WorkSchedule> WorkSchedules { get; set; }
+
+        DbSet<Ingredient> Ingredients { get; set; }
     }
 }
