@@ -19,12 +19,12 @@ namespace SharedLibrary.DataBase_and_more
             base.OnModelCreating(modelBuilder);
         }
 
-        DbSet<Employee> Employees { get; set; }
+        public DbSet<Employee> Employees { get; set; }
 
-        DbSet<Shop> Shops { get; set; }
+        public DbSet<Shop> Shops { get; set; }
 
-        DbSet<WorkSchedule> WorkSchedules { get; set; }
+        public DbSet<WorkSchedule> WorkSchedules { get; set; }
 
-        DbSet<Ingredient> Ingredients { get; set; }
+        public DbSet<Ingredient> Ingredients { get; set; }
     }
 }

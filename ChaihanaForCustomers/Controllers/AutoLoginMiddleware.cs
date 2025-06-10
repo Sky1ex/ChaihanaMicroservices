@@ -9,6 +9,7 @@ using System.Text;
 using SharedLibrary.DataBase_and_more;
 using SharedLibrary.Repository.Default;
 using SharedLibrary.Models.Customers;
+using Twilio.Rest.PreviewIam.Organizations;
 
 namespace WebApplication1.Controllers
 {
@@ -17,6 +18,7 @@ namespace WebApplication1.Controllers
 
         private readonly RequestDelegate _next;
         private readonly IConfiguration _configuration;
+        private readonly string role = "userId";
 
         public AutoLoginMiddleware(RequestDelegate next, IConfiguration configuration)
         {
@@ -32,7 +34,7 @@ namespace WebApplication1.Controllers
             var jwtToken = context.Request.Cookies["jwt_token"];
             Guid userId;
 
-            if (string.IsNullOrEmpty(jwtToken) || !AuthOptions.ValidateToken(jwtToken, out userId))
+            if (string.IsNullOrEmpty(jwtToken) || !AuthOptions.ValidateToken(jwtToken, role, out userId))
             {
                 // Создаем нового пользователя
                 userId = Guid.NewGuid();
@@ -43,10 +45,10 @@ namespace WebApplication1.Controllers
                 await _unitOfWork.SaveChangesAsync();
 
                 // Устанавливаем новую куку с токеном
-                AuthOptions.SetJwtCookie(context, userId);
+                AuthOptions.SetJwtCookie(context, userId, role);
 
                 // Добавляем токен в заголовки текущего запроса
-                context.Request.Headers.Append("Authorization", $"Bearer {AuthOptions.GenerateJwtToken(userId)}");
+                context.Request.Headers.Append("Authorization", $"Bearer {AuthOptions.GenerateJwtToken(userId, role)}");
             }
             else
             {

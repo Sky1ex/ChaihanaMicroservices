@@ -19,3 +19,52 @@
     background: rgba(249, 251, 250, 0.8);
     border-radius: 29px;
 }
+
+#authorization-form {
+    width: 420px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#authorization-text {
+    position: relative;
+    top: -40px;
+    font-family: Montserrat;
+    font-size: 20px;
+}
+
+#authorization-button {
+    position: relative;
+    top: 80px;
+    width: 150px;
+    height: 40px;
+    background: #E67225;
+    color: #FFFFFF;
+    border-radius: 20px;
+
+    cursor: pointer;
+    display: inline-flex;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+}

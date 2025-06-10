@@ -16,6 +16,7 @@ namespace WebApplication1.OtherClasses
         private readonly IUnitOfWorkCustomers _unitOfWork;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IMapper _mapper;
+        private readonly string role = "userId";
 
         public UserService(IHttpContextAccessor httpContextAccessor, IUnitOfWorkCustomers unitOfWork, IMapper mapper)
         {
@@ -50,7 +51,7 @@ namespace WebApplication1.OtherClasses
             var jwtToken = httpContext.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
             Guid userId;
 
-            if (string.IsNullOrEmpty(jwtToken) || !AuthOptions.ValidateToken(jwtToken, out userId))
+            if (string.IsNullOrEmpty(jwtToken) || !AuthOptions.ValidateToken(jwtToken, role, out userId))
             {
                 // Создаем нового пользователя
                 userId = Guid.NewGuid();
@@ -62,10 +63,10 @@ namespace WebApplication1.OtherClasses
                 await _unitOfWork.Carts.AddAsync(cart);
                 await _unitOfWork.SaveChangesAsync();
 
-                AuthOptions.SetJwtCookie(httpContext, userId);
+                AuthOptions.SetJwtCookie(httpContext, userId, role);
 
                 // Генерируем новый токен
-                var newToken = AuthOptions.GenerateJwtToken(userId);
+                var newToken = AuthOptions.GenerateJwtToken(userId, role);
                 httpContext.Response.Headers.Append("Authorization", $"Bearer {newToken}");
             }
 
@@ -81,7 +82,7 @@ namespace WebApplication1.OtherClasses
                 throw new InvalidOperationException("HttpContext is not available.");
             }
 
-            AuthOptions.SetJwtCookie(httpContext, login);
+            AuthOptions.SetJwtCookie(httpContext, login, role);
 
             return true;
         }

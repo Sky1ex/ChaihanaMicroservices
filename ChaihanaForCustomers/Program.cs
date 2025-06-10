@@ -86,7 +86,7 @@ builder.Services.AddDbContext<WebDbForCafe>((sp, options) =>
 
 // Добавляем маппер
 var config = new TypeAdapterConfig();
-new MappingConfig().Register(config);
+new WebApplication1.DTO.MappingConfig().Register(config);
 
 builder.Services.AddSingleton(config);
 builder.Services.AddScoped<IMapper, Mapper>();

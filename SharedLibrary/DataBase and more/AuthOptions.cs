@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
+using System.Data;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -12,25 +13,31 @@ namespace SharedLibrary.DataBase_and_more
         public const string AUDIENCE = "MyAuthClient"; 
         const string KEY = "mysupersecret_secretkey!123";  
         public const int LIFETIME = 1;
+
         public static SymmetricSecurityKey GetSymmetricSecurityKey()
         {
             return new SymmetricSecurityKey(Encoding.ASCII.GetBytes(KEY));
         }
 
-        public static void SetJwtCookie(HttpContext context, Guid userId)
+        public static void SetJwtCookie(HttpContext context, Guid userId, string role)
         {
-            var token = GenerateJwtToken(userId); // Ваш метод генерации JWT
+            var token = GenerateJwtToken(userId, role); // Ваш метод генерации JWT
 
-            context.Response.Cookies.Append("jwt_token", token, new CookieOptions
+            var options = new CookieOptions
             {
                 HttpOnly = true, // Защита от XSS
                 Secure = true,    // Только HTTPS
                 SameSite = SameSiteMode.Strict,
                 Expires = DateTimeOffset.Now.AddDays(30) // Срок действия
-            });
+
+            };
+
+            if (role != "userId") options.Expires = null;
+
+            context.Response.Cookies.Append("jwt_token", token, options);
         }
 
-        public static string GenerateJwtToken(Guid userId)
+        public static string GenerateJwtToken(Guid userId, string role)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(GetSymmetricSecurityKey().ToString()));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
@@ -38,14 +45,15 @@ namespace SharedLibrary.DataBase_and_more
             var token = new JwtSecurityToken(
                 issuer: ISSUER,
                 audience: AUDIENCE,
-                claims: new[] { new Claim("userId", userId.ToString()) },
+                claims: new[] { new Claim(role, userId.ToString()) },
+                /*claims: claims,*/
                 expires: DateTime.Now.AddYears(1),
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        public static bool ValidateToken(string token, out Guid userId)
+        public static bool ValidateToken(string token, string role, out Guid userId)
         {
             userId = Guid.Empty;
 
@@ -66,7 +74,8 @@ namespace SharedLibrary.DataBase_and_more
                 }, out SecurityToken validatedToken);
 
                 var jwtToken = (JwtSecurityToken)validatedToken;
-                userId = Guid.Parse(jwtToken.Claims.First(x => x.Type == "userId").Value);
+                userId = Guid.Parse(jwtToken.Claims.First(x => x.Type == role).Value);
+                
 
                 return true;
             }

@@ -1,3 +1,7 @@
+using ChaihanaForEmplyee.Controllers;
+using ChaihanaForEmplyee.Services;
+using Mapster;
+using MapsterMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.OAuth;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +18,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IUnitOfWorkEmployee, UnitOfWorkEmployee>();
 builder.Services.AddScoped<IUnitOfWorkCafe, UnitOfWorkCafe>();
+builder.Services.AddScoped<RegistrationService>();
 
 /*builder.Services.AddDbContext<WebDbForCafe>((sp, options) =>
 {
@@ -27,6 +32,12 @@ builder.Services.AddDbContext<WebDbForEmployee>(options =>
 
 builder.Services.AddDbContext<WebDbForCafe>(options =>
 	options.UseNpgsql(builder.Configuration.GetConnectionString("WebDbForCafe")));
+
+var config = new TypeAdapterConfig();
+new MappingConfig().Register(config);
+
+builder.Services.AddSingleton(config);
+builder.Services.AddScoped<IMapper, Mapper>();
 
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -52,7 +63,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 		};
 	});
 
-builder.Services.AddAuthorization();
+builder.Services.AddAuthorization(options =>
+{
+	options.AddPolicy("admin", policy => policy.RequireRole("admin"));
+	options.AddPolicy("waiter", policy => policy.RequireRole("waiter"));
+});
 
 builder.Services.AddHttpContextAccessor();
 

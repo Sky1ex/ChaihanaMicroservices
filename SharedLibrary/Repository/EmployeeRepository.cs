@@ -1,4 +1,5 @@
-﻿using SharedLibrary.DataBase_and_more;
+﻿using Microsoft.EntityFrameworkCore;
+using SharedLibrary.DataBase_and_more;
 using SharedLibrary.Models.Employee;
 using SharedLibrary.Repository.Default;
 using System;
@@ -14,6 +15,11 @@ namespace SharedLibrary.Repository
 		private bool disposed = false;
 
 		public EmployeeRepository(WebDbForEmployee context) : base(context) { }
+
+		public async Task<Employee?> GetUserByNameAndPassword(string name, string password)
+		{
+			return await _context.Employees.FirstOrDefaultAsync(x => x.Name == name && x.Password == password);
+		}
 
 		protected virtual void Dispose(bool disposing)
 		{
