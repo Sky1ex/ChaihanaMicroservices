@@ -1,0 +1,63 @@
+﻿.menu-content-wrapper {
+    position: relative;
+    min-height: calc(100vh - 310px); /* Вычитаем высоту header */
+    padding-top: 110px; /* Компенсируем top: 110px у visible-category */
+    margin-bottom: 40px; /* Для футера */
+    justify-self: center;
+    display: flex;
+    align-items: center;
+}
+
+.main-container {
+    /* Rectangle 36 */
+
+    position: relative;
+    width: 1360px;
+    height: 792px;
+    top: -70px;
+    justify-self: center;
+    background: rgba(249, 251, 250, 0.8);
+    border-radius: 29px;
+}
+
+.dropbtn {
+    background-color: #3498db;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Контейнер для выпадающего списка */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Скрытый контент выпадающего списка */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Стили для ссылок внутри выпадающего списка */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        /* Стили для ссылок при наведении */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

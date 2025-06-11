@@ -17,11 +17,13 @@ namespace ChaihanaForEmplyee.Controllers
 		}
 
 		// ДОДЕЛАТЬ!!!
-		[HttpGet("Employee/Authorization")]
+		[HttpGet("Employee/Api/Authorization")]
 		public async Task<IActionResult> Authorization(string login, string password)
 		{
-			var user = await _registrationService.CheckPassword(login, password);
-			return Ok(user);
+            var user = await _registrationService.CheckPassword(login, password);
+			if (user == null) return BadRequest("Invalid password or login!");
+			if (user.Role == "manager") return Json(new { redirectUrl = "/Manager/Sales" });
+            return Ok(user);
 		}
 	}
 }

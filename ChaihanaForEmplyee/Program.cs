@@ -66,7 +66,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddAuthorization(options =>
 {
 	options.AddPolicy("admin", policy => policy.RequireRole("admin"));
-	options.AddPolicy("waiter", policy => policy.RequireRole("waiter"));
+    options.AddPolicy("manager", policy => policy.RequireRole("manager"));
+    options.AddPolicy("waiter", policy => policy.RequireRole("waiter"));
 });
 
 builder.Services.AddHttpContextAccessor();

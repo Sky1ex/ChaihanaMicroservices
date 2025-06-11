@@ -27,6 +27,9 @@ namespace ChaihanaForEmplyee.Services
 			var user = await _unitOfWorkEmployee.Employee.GetUserByNameAndPassword(login, password);
             var httpContext = _httpContextAccessor.HttpContext;
 
+
+			if (user == null) return null;
+
             AuthOptions.SetJwtCookie(httpContext, user.EmployeeId, user.Role);
 
 			return _mapper.Map<EmployeeDto>(user);
